@@ -1,0 +1,44 @@
+{
+  "name": "@openyodel/sdk",
+  "version": "0.1.0",
+  "description": "Open Yodel SDK — TypeScript client for the Yodel protocol",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "tsc -p tsconfig.test.json --outDir dist-test && node --test dist-test/test/*.test.js",
+    "test:typecheck": "tsc -p tsconfig.test.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^25.4.0",
+    "typescript": "^5.7.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openyodel/js.git"
+  },
+  "keywords": [
+    "yodel",
+    "openyodel",
+    "voice",
+    "ai",
+    "llm",
+    "streaming",
+    "sse"
+  ]
+}
